@@ -1,5 +1,8 @@
 package org.formacio.setmana2.repositori;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.formacio.setmana2.domini.Curs;
 import org.formacio.setmana2.domini.Matricula;
 import org.springframework.stereotype.Service;
@@ -11,9 +14,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class RepositoriEscola {
 
+	@PersistenceContext
+	private EntityManager em;
+
 	
 	public Curs carregaCurs(String nom) {
-		return null;
+		return em.find(Curs.class, nom);
 	}
 	
 	
