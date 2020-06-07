@@ -2,6 +2,8 @@ package org.formacio.setmana2.domini;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,6 +13,7 @@ import javax.persistence.Table;
 @Table(name="T_MATRICULES")
 public class Matricula {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="MAT_ID")
 	private Long id; 
 	@ManyToOne
