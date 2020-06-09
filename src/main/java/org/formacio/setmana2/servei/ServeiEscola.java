@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.formacio.setmana2.domini.Matricula;
 import org.formacio.setmana2.repositori.EdatIncorrecteException;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class ServeiEscola {
 
 	
